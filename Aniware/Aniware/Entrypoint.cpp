@@ -1,9 +1,10 @@
 #include <Windows.h>
 #include <iostream>
-#include <chrono>
 
 #include "..\Aniware\Utilities\Globals.h"
 #include "..\Aniware\Utilities\Utilities.h"
+
+#include "..\Aniware\Interfaces.h"
 
 namespace Aniware {
 
@@ -27,6 +28,11 @@ namespace Aniware {
 		DllSetupConsole();
 
 		g_pCUtilities->ConsoleLog("Console Initalised");
+
+		/* Init interfaces */
+		g_pSurface();
+		g_pEngine();
+		g_pEntityList();
 
 	}
 

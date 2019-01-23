@@ -4,6 +4,6 @@
 
 namespace Aniware {
 
-	extern CUtilities* g_pCUtilities;
+	extern CUtilities * g_pCUtilities;
 
 }

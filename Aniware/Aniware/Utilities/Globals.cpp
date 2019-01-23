@@ -2,6 +2,6 @@
 
 namespace Aniware {
 
-	CUtilities* g_pCUtilities;
+	CUtilities * g_pCUtilities;
 
 }

@@ -20,10 +20,17 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Entrypoint.cpp" />
+    <ClCompile Include="Interfaces.cpp" />
     <ClCompile Include="Utilities\Globals.cpp" />
     <ClCompile Include="Utilities\Utilities.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Classes\Color.h" />
+    <ClInclude Include="Classes\IClientEntity.h" />
+    <ClInclude Include="Classes\IClientEntityList.h" />
+    <ClInclude Include="Classes\ISurface.h" />
+    <ClInclude Include="Classes\IVEngineClient.h" />
+    <ClInclude Include="Interfaces.h" />
     <ClInclude Include="Utilities\Globals.h" />
     <ClInclude Include="Utilities\Utilities.h" />
   </ItemGroup>

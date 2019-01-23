@@ -15,6 +15,9 @@
     <Filter Include="Source Files\Utilities">
       <UniqueIdentifier>{b2c617fc-5469-4d1f-b198-52492da135cd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Classes">
+      <UniqueIdentifier>{68dcbb85-1955-4d4a-8c40-e65a06b11069}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Entrypoint.cpp" />
@@ -24,6 +27,9 @@
     <ClCompile Include="Utilities\Globals.cpp">
       <Filter>Source Files\Utilities</Filter>
     </ClCompile>
+    <ClCompile Include="Interfaces.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Utilities\Utilities.h">
@@ -31,6 +37,24 @@
     </ClInclude>
     <ClInclude Include="Utilities\Globals.h">
       <Filter>Header Files\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Interfaces.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Color.h">
+      <Filter>Header Files\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\ISurface.h">
+      <Filter>Header Files\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\IVEngineClient.h">
+      <Filter>Header Files\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\IClientEntity.h">
+      <Filter>Header Files\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\IClientEntityList.h">
+      <Filter>Header Files\Classes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
