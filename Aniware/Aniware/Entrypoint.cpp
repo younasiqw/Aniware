@@ -1,7 +1,13 @@
 #include <Windows.h>
 #include <iostream>
+#include <chrono>
+
+#include "..\Aniware\Utilities\Globals.h"
+#include "..\Aniware\Utilities\Utilities.h"
 
 namespace Aniware {
+
+	HANDLE DllBegin, DllDetach;
 
 	VOID WINAPI DllSetupConsole() {
 
@@ -10,7 +16,7 @@ namespace Aniware {
 		freopen_s((FILE**)stdin, "CONIN$", "r", stdin);
 		freopen_s((FILE**)stdout, "CONOUT$", "w", stdout);
 
-		SetConsoleTitleA(" ( Aniware Debug Console ) ");
+		SetConsoleTitleA(" [ Aniware Debug Console ] ");
 
 	}
 
@@ -20,10 +26,28 @@ namespace Aniware {
 
 		DllSetupConsole();
 
-		// Call options manager.
+		g_pCUtilities->ConsoleLog("Console Initalised");
 
-		// Call hook manager.
+	}
 
+	VOID WINAPI DllExit(HINSTANCE module_handle) {
+
+		while (true) {
+
+			if (GetAsyncKeyState(VK_END)) {
+
+				fclose((FILE*)stdin);
+				fclose((FILE*)stdout);
+
+				HWND hw_ConsoleHwnd = GetConsoleWindow();
+
+				FreeConsole();
+				PostMessageW(hw_ConsoleHwnd, WM_CLOSE, 0, 0);
+
+				FreeLibraryAndExitThread(module_handle, 1);
+
+			}
+		}
 	}
 }
 
@@ -31,13 +55,11 @@ BOOL WINAPI DllMain(HINSTANCE module_handle, DWORD call_reason, LPVOID reserved_
 
 	if (call_reason == DLL_PROCESS_ATTACH) {
 
-		Aniware::DllSetup(module_handle);
+		Aniware::DllSetup(module_handle); {
 
-	}
-	else if (call_reason == DLL_PROCESS_DETACH) {
+			Aniware::DllDetach = CreateThread(nullptr, NULL, (LPTHREAD_START_ROUTINE)Aniware::DllExit, module_handle, NULL, nullptr);
 
-		FreeLibraryAndExitThread(module_handle, 1);
-
+		}
 	}
 
 	return TRUE;
