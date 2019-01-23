@@ -5,6 +5,7 @@
 #include "..\Aniware\Utilities\Globals.h"
 #include "..\Aniware\Utilities\Utilities.h"
 
+// This is a comment. xxdd
 namespace Aniware {
 
 	HANDLE DllBegin, DllDetach;
