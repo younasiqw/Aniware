@@ -5,15 +5,15 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+    <Filter Include="Source Files\Utilities">
+      <UniqueIdentifier>{b2c617fc-5469-4d1f-b198-52492da135cd}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Header Files">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
     <Filter Include="Header Files\Utilities">
       <UniqueIdentifier>{9a625f3d-b532-4321-996b-7834d403095b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Utilities">
-      <UniqueIdentifier>{b2c617fc-5469-4d1f-b198-52492da135cd}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\Classes">
       <UniqueIdentifier>{68dcbb85-1955-4d4a-8c40-e65a06b11069}</UniqueIdentifier>
