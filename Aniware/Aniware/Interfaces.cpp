@@ -37,4 +37,22 @@ namespace Aniware {
 		return m_pEntityList;
 	
 	}
+
+	SDK::IBaseClientDLL * g_pClient() {
+
+		SDK::IBaseClientDLL * m_pClient = (SDK::IBaseClientDLL*)g_pCUtilities->GetInterface((char*)"client_panorama.dll", (char*)"VClient018");
+
+		printf("\ng_pClient %i", (int)m_pClient);
+		return m_pClient;
+
+	}
+
+	SDK::IClientMode * g_pClientMode() {
+
+		SDK::IClientMode * m_pClientMode = **(SDK::IClientMode***)((*(DWORD**)I::Client())[10] + 0x5);
+
+		printf("\ng_pClientMode %i", (int)m_pClientMode);
+		return m_pClientMode;
+
+
 }

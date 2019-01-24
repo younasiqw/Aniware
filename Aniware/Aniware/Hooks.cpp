@@ -38,6 +38,8 @@ namespace Aniware {
 		if (!pCmd || !pCmd->command_number)
 			return oCreateMove;
 
+		g_pCmd = pCmd;
+
 		/*
 		g::pCmd = pCmd;
 		g::pLocalEntity = g_pEntityList->GetClientEntity(g_pEngine->GetLocalPlayer());

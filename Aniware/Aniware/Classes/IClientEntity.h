@@ -4,6 +4,11 @@
 
 namespace SDK {
 
+	class IBaseClientDLL {
+	public:
+		
+	};
+
 	class IClientEntity {
 	public:
 
