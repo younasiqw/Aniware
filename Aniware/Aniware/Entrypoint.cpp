@@ -8,8 +8,8 @@
 
 namespace Aniware {
 
-	HANDLE DllBegin, DllDetach;
-
+	HANDLE DllDetach;
+	
 	VOID WINAPI DllSetupConsole() {
 
 		AllocConsole();
@@ -29,11 +29,6 @@ namespace Aniware {
 
 		g_pCUtilities->ConsoleLog("Console Initalised");
 
-		/* Init interfaces */
-		g_pSurface();
-		g_pEngine();
-		g_pEntityList();
-
 	}
 
 	VOID WINAPI DllExit(HINSTANCE module_handle) {
@@ -45,6 +40,7 @@ namespace Aniware {
 				fclose((FILE*)stdin);
 				fclose((FILE*)stdout);
 
+				CloseHandle(Aniware::DllDetach);
 				HWND hw_ConsoleHwnd = GetConsoleWindow();
 
 				FreeConsole();

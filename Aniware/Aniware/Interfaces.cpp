@@ -2,11 +2,20 @@
 
 namespace Aniware {
 
+	SDK::IPanel * g_pPanel() {
+
+		SDK::IPanel * m_pPanel = (SDK::IPanel*)g_pCUtilities->GetInterface((char*)"vgui2.dll", (char*)"VGUI_Panel009");
+
+		printf("\ng_pPanel %i", (int)m_pPanel);
+		return m_pPanel;
+
+	}
+
 	SDK::ISurface * g_pSurface() {
 		
 		SDK::ISurface * m_pSurface = (SDK::ISurface*)g_pCUtilities->GetInterface((char*)"vguimatsurface.dll", (char*)"VGUI_Surface031");
 		
-		printf("\n     [*] Found m_pSurface : %i\n", (int)m_pSurface);
+		printf("\ng_pSurface %i", (int)m_pSurface);
 		return m_pSurface;
 
 	}
@@ -15,7 +24,7 @@ namespace Aniware {
 
 		SDK::IVEngineClient * m_pEngine = (SDK::IVEngineClient*)g_pCUtilities->GetInterface((char*)"engine.dll", (char*)"VEngineClient014");
 
-		printf("     [*] Found m_pEngine : %i\n", (int)m_pEngine);
+		printf("\ng_pEngine %i", (int)m_pEngine);
 		return m_pEngine;
 
 	}
@@ -24,7 +33,7 @@ namespace Aniware {
 	
 		SDK::IClientEntityList * m_pEntityList = (SDK::IClientEntityList*)g_pCUtilities->GetInterface((char*)"client_panorama.dll", (char*)"VClientEntityList003");
 
-		printf("     [*] Found m_pEntityList : %i\n\n", (int)m_pEntityList);
+		printf("\ng_pEntityList %i", (int)m_pEntityList);
 		return m_pEntityList;
 	
 	}
