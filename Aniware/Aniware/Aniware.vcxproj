@@ -35,6 +35,7 @@
     <ClInclude Include="Classes\ISurface.h" />
     <ClInclude Include="Classes\IVEngineClient.h" />
     <ClInclude Include="Classes\Vector.h" />
+    <ClInclude Include="Classes\VTHook.h" />
     <ClInclude Include="Hooks.h" />
     <ClInclude Include="Interfaces.h" />
     <ClInclude Include="Utilities\Globals.h" />

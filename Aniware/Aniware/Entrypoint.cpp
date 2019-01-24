@@ -1,6 +1,8 @@
 #include <Windows.h>
 #include <iostream>
 
+#include "..\Aniware\Hooks.h"
+
 #include "..\Aniware\Utilities\Globals.h"
 #include "..\Aniware\Utilities\Utilities.h"
 
@@ -8,7 +10,7 @@
 
 namespace Aniware {
 
-	HANDLE DllDetach;
+	HANDLE DllDetach, DllAttach;
 	
 	VOID WINAPI DllSetupConsole() {
 
@@ -26,8 +28,20 @@ namespace Aniware {
 		DisableThreadLibraryCalls(module_handle);
 
 		DllSetupConsole();
+		g_pCUtilities->ConsoleLog("Console initalised");
 
-		g_pCUtilities->ConsoleLog("Console Initalised");
+		g_pCUtilities->ConsoleLog("Getting interfaces"); {
+
+			g_pClient();
+			g_pClientMode();
+			g_pEngine();
+			g_pEntityList();
+			g_pPanel();
+			g_pSurface();
+
+		} g_pCUtilities->ConsoleLog("Interfaces grabbed");
+
+		Aniware::Hooks::Initialise();
 
 	}
 
@@ -46,6 +60,7 @@ namespace Aniware {
 				FreeConsole();
 				PostMessageW(hw_ConsoleHwnd, WM_CLOSE, 0, 0);
 
+				Aniware::Hooks::Restore();
 				FreeLibraryAndExitThread(module_handle, 1);
 
 			}

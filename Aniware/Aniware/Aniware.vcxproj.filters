@@ -74,5 +74,8 @@
     <ClInclude Include="Classes\Vector.h">
       <Filter>Header Files\Classes</Filter>
     </ClInclude>
+    <ClInclude Include="Classes\VTHook.h">
+      <Filter>Header Files\Classes</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

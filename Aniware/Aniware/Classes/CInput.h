@@ -1,7 +1,6 @@
 #pragma once
 
 #include "..\Classes\Vector.h"
-#include <cstddef>
 
 #define IN_ATTACK        (1 << 0)
 #define IN_JUMP          (1 << 1)
@@ -32,9 +31,6 @@
 
 namespace SDK {
 
-	class bf_read;
-	class bf_write;
-
 	class CUserCmd {
 	public:
 
@@ -42,7 +38,7 @@ namespace SDK {
 
 		int       command_number;     // 0x04
 		int       tick_count;         // 0x08
-		QAngle    viewangles;         // 0x0C
+		Vector    viewangles;         // 0x0C
 		Vector    aimdirection;       // 0x18
 		float     forwardmove;        // 0x24
 		float     sidemove;           // 0x28
@@ -87,8 +83,8 @@ namespace SDK {
 		int                 m_nCameraX;                   //0xB8
 		int                 m_nCameraY;                   //0xBC
 		bool                m_CameraIsOrthographic;       //0xC0
-		QAngle              m_angPreviousViewAngles;      //0xC4
-		QAngle              m_angPreviousViewAnglesTilt;  //0xD0
+		Vector              m_angPreviousViewAngles;      //0xC4
+		Vector              m_angPreviousViewAnglesTilt;  //0xD0
 		float               m_flLastForwardMove;          //0xDC
 		int                 m_nClearInputState;           //0xE0
 		char                pad_0xE4[0x8];                //0xE4

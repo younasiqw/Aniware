@@ -6,7 +6,6 @@
 namespace SDK {
 
 	typedef float vec_t;
-	typedef Vector QAngle;
 
 	class Vector {
 	public:
