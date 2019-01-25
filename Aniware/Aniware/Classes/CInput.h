@@ -38,7 +38,7 @@ namespace SDK {
 
 		int       command_number;     // 0x04
 		int       tick_count;         // 0x08
-		Vector    viewangles;         // 0x0C
+		QAngle    viewangles;         // 0x0C
 		Vector    aimdirection;       // 0x18
 		float     forwardmove;        // 0x24
 		float     sidemove;           // 0x28

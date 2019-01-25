@@ -1,11 +1,10 @@
 #include <Windows.h>
 #include <iostream>
-
-#include "..\Aniware\Hooks.h"
+#include <thread>
 
 #include "..\Aniware\Utilities\Globals.h"
 #include "..\Aniware\Utilities\Utilities.h"
-
+#include "..\Aniware\Hooks\Hooks.h"
 #include "..\Aniware\Interfaces.h"
 
 namespace Aniware {
@@ -30,16 +29,7 @@ namespace Aniware {
 		DllSetupConsole();
 		g_pCUtilities->ConsoleLog("Console initalised");
 
-		g_pCUtilities->ConsoleLog("Getting interfaces"); {
-
-			g_pClient();
-			g_pClientMode();
-			g_pEngine();
-			g_pEntityList();
-			g_pPanel();
-			g_pSurface();
-
-		} g_pCUtilities->ConsoleLog("Interfaces grabbed");
+		Aniware::Interfaces::Initialise();
 
 		Aniware::Hooks::Initialise();
 
@@ -48,6 +38,9 @@ namespace Aniware {
 	VOID WINAPI DllExit(HINSTANCE module_handle) {
 
 		while (true) {
+
+			using namespace std::literals::chrono_literals;
+			std::this_thread::sleep_for(5ms);
 
 			if (GetAsyncKeyState(VK_END)) {
 

@@ -18,6 +18,12 @@
     <Filter Include="Header Files\Classes">
       <UniqueIdentifier>{68dcbb85-1955-4d4a-8c40-e65a06b11069}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Hooks">
+      <UniqueIdentifier>{3c2b4a1f-71c5-4ed4-bad4-f0b635c0fe5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Hooks">
+      <UniqueIdentifier>{3e5d1f40-3faa-45bd-8c89-e5bb606a66da}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Entrypoint.cpp" />
@@ -30,8 +36,8 @@
     <ClCompile Include="Interfaces.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Hooks.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Hooks\Hooks.cpp">
+      <Filter>Source Files\Hooks</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -59,9 +65,6 @@
     <ClInclude Include="Classes\IClientEntityList.h">
       <Filter>Header Files\Classes</Filter>
     </ClInclude>
-    <ClInclude Include="Hooks.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Classes\IPanel.h">
       <Filter>Header Files\Classes</Filter>
     </ClInclude>
@@ -76,6 +79,9 @@
     </ClInclude>
     <ClInclude Include="Classes\VTHook.h">
       <Filter>Header Files\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Hooks\Hooks.h">
+      <Filter>Header Files\Hooks</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -66,7 +66,7 @@ namespace SDK {
 			}
 		}
 
-		template<class Type>
+		template <class Type>
 		Type Hook(uint32_t index, Type fnNew) {
 
 			DWORD dwOld = (DWORD)m_pOriginalVMTable[index];
@@ -75,11 +75,13 @@ namespace SDK {
 			return (Type)dwOld;
 
 		}
+
 		void Unhook(uint32_t index) {
 
 			auto it = m_vecHookedIndexes.find(index);
 
 			if (it != m_vecHookedIndexes.end()) {
+
 				m_pNewVMTable[index] = (DWORD)it->second;
 				m_vecHookedIndexes.erase(it);
 
@@ -112,7 +114,7 @@ namespace SDK {
 
 	private:
 
-		std::map<uint32_t, DWORD> m_vecHookedIndexes;
+		std::map <uint32_t, DWORD> m_vecHookedIndexes;
 		
 		PPDWORD m_ppClassBase;
 		PDWORD m_pOriginalVMTable, m_pNewVMTable;
