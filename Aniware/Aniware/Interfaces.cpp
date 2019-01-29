@@ -13,27 +13,27 @@ namespace Aniware {
 
 		void Initialise() {
 
-			g_pCUtilities->ConsoleLog("Getting interfaces"); {
+			Aniware::Utilities::ConsoleLog("Getting interfaces"); {
 
 				if (!g_pPanel)
-					g_pPanel = (SDK::IPanel*)g_pCUtilities->GetInterface((char*)"vgui2.dll", (char*)"VGUI_Panel009");
+					g_pPanel = Aniware::Utilities::GetInterface <SDK::IPanel> ((char*)"vgui2.dll", (char*)"VGUI_Panel009");
 
 				if (!g_pSurface)
-					g_pSurface = (SDK::ISurface*)g_pCUtilities->GetInterface((char*)"vguimatsurface.dll", (char*)"VGUI_Surface031");
+					g_pSurface = Aniware::Utilities::GetInterface <SDK::ISurface> ((char*)"vguimatsurface.dll", (char*)"VGUI_Surface031");
 
 				if (!g_pEngine)
-					g_pEngine = (SDK::IVEngineClient*)g_pCUtilities->GetInterface((char*)"engine.dll", (char*)"VEngineClient014");
+					g_pEngine = Aniware::Utilities::GetInterface <SDK::IVEngineClient> ((char*)"engine.dll", (char*)"VEngineClient014");
 
 				if (!g_pClient)
-					g_pClient = (SDK::IBaseClientDLL*)g_pCUtilities->GetInterface((char*)"client_panorama.dll", (char*)"VClient018");
+					g_pClient = Aniware::Utilities::GetInterface <SDK::IBaseClientDLL> ((char*)"client_panorama.dll", (char*)"VClient018");
 
 				if (!g_pClientMode)
 					g_pClientMode = **(SDK::IClientMode***)((*(DWORD**)g_pClient)[10] + 0x5);
 
 				if (!g_pEntityList)
-					g_pEntityList = (SDK::IClientEntityList*)g_pCUtilities->GetInterface((char*)"client_panorama.dll", (char*)"VClientEntityList003");
+					g_pEntityList = Aniware::Utilities::GetInterface <SDK::IClientEntityList> ((char*)"client_panorama.dll", (char*)"VClientEntityList003");
 
-			} g_pCUtilities->ConsoleLog("Interfaces grabbed");
+			} Aniware::Utilities::ConsoleLog("Interfaces grabbed");
 		}
 
 	}

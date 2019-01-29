@@ -1,6 +1,6 @@
 #pragma once
 
-#include "..\Utilities\Globals.h"
+#include "..\Globals\Globals.h"
 
 namespace SDK {
 
@@ -16,7 +16,7 @@ namespace SDK {
 
 			void *pNetworked = (void*)(this + 0x8);
 			typedef bool(__thiscall *OrigFn)(void*);
-			return Aniware::g_pCUtilities->VirtualFunction<OrigFn>(pNetworked, 9)(pNetworked);
+			return Aniware::Utilities::VirtualFunction<OrigFn>(pNetworked, 9)(pNetworked);
 
 		}
 
@@ -24,7 +24,7 @@ namespace SDK {
 
 			void *pNetworked = (void*)(this + 0x8);
 			typedef int(__thiscall *OrigFn)(void*);
-			return Aniware::g_pCUtilities->VirtualFunction<OrigFn>(pNetworked, 10)(pNetworked);
+			return Aniware::Utilities::VirtualFunction<OrigFn>(pNetworked, 10)(pNetworked);
 
 		}
 	};

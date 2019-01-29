@@ -20,10 +20,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Entrypoint.cpp" />
+    <ClCompile Include="Globals\Globals.cpp" />
     <ClCompile Include="Hooks\Hooks.cpp" />
     <ClCompile Include="Interfaces.cpp" />
-    <ClCompile Include="Utilities\Globals.cpp" />
-    <ClCompile Include="Utilities\Utilities.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Classes\CInput.h" />
@@ -34,12 +33,12 @@
     <ClInclude Include="Classes\IPanel.h" />
     <ClInclude Include="Classes\ISurface.h" />
     <ClInclude Include="Classes\IVEngineClient.h" />
+    <ClInclude Include="Classes\Utilities.h" />
     <ClInclude Include="Classes\Vector.h" />
     <ClInclude Include="Classes\VTHook.h" />
+    <ClInclude Include="Globals\Globals.h" />
     <ClInclude Include="Hooks\Hooks.h" />
     <ClInclude Include="Interfaces.h" />
-    <ClInclude Include="Utilities\Globals.h" />
-    <ClInclude Include="Utilities\Utilities.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

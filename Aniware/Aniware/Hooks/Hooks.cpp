@@ -19,6 +19,8 @@ namespace Aniware {
 			if (!pCmd || !pCmd->command_number)
 				return oCreateMove;
 
+			// Createmove features.
+
 			return false;
 		}
 
@@ -33,13 +35,13 @@ namespace Aniware {
 
 	void Hooks::Initialise() {
 
-		g_pCUtilities->ConsoleLog("Initialising hooks"); {
+		Utilities::ConsoleLog("Initialising hooks"); {
 
 			g_pPanelHook = std::make_unique<SDK::VFTableHook>((SDK::PPDWORD)g_pPanel, true);
 			g_pEngineHook = std::make_unique<SDK::VFTableHook>((SDK::PPDWORD)g_pEngine, true);
 			g_pClientModeHook = std::make_unique<SDK::VFTableHook>((SDK::PPDWORD)g_pClientMode, true);
 
-		} g_pCUtilities->ConsoleLog("Hooks initialised");
+		} Utilities::ConsoleLog("Hooks initialised");
 
 		g_pClientModeHook->Hook(24, Functions::hkCreateMove);
 		g_pClientModeHook->Hook(35, Functions::hkViewModelFOV);

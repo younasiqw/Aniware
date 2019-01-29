@@ -1,7 +1,7 @@
 #pragma once
 
 #include "..\Aniware\Classes\IClientEntity.h"
-#include "..\Aniware\Utilities\Globals.h"
+#include "..\Aniware\Globals\Globals.h"
 
 namespace SDK {
 
@@ -11,14 +11,14 @@ namespace SDK {
 		IClientEntity* GetClientEntity(int entNum) {
 
 			typedef IClientEntity*(__thiscall *OrigFn)(void*, int);
-			return Aniware::g_pCUtilities->VirtualFunction<OrigFn>(this, 3)(this, entNum);
+			return Aniware::Utilities::VirtualFunction<OrigFn>(this, 3)(this, entNum);
 
 		}
 
 		int GetHighestEntityIndex() {
 
 			typedef int(__thiscall *OrigFn)(void*);
-			return Aniware::g_pCUtilities->VirtualFunction<OrigFn>(this, 6)(this);
+			return Aniware::Utilities::VirtualFunction<OrigFn>(this, 6)(this);
 
 		}
 	};

@@ -10,7 +10,7 @@ namespace SDK {
 		bool ShouldDrawEntity(IClientEntity *pEnt) {
 		
 			typedef bool(__thiscall *OrigFn)(void*, IClientEntity*);
-			return Aniware::g_pCUtilities->VirtualFunction<OrigFn>(this, 14)(this, pEnt);
+			return Aniware::Utilities::VirtualFunction<OrigFn>(this, 14)(this, pEnt);
 
 		}
 	};

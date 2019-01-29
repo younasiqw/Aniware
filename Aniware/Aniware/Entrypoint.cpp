@@ -2,8 +2,7 @@
 #include <iostream>
 #include <thread>
 
-#include "..\Aniware\Utilities\Globals.h"
-#include "..\Aniware\Utilities\Utilities.h"
+#include "..\Aniware\Globals\Globals.h"
 #include "..\Aniware\Hooks\Hooks.h"
 #include "..\Aniware\Interfaces.h"
 
@@ -27,7 +26,7 @@ namespace Aniware {
 		DisableThreadLibraryCalls(module_handle);
 
 		DllSetupConsole();
-		g_pCUtilities->ConsoleLog("Console initalised");
+		Utilities::ConsoleLog("Console initalised");
 
 		Aniware::Interfaces::Initialise();
 

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "..\Aniware\Utilities\Globals.h"
+#include "..\Globals\Globals.h"
 
 namespace SDK {
 
@@ -10,7 +10,7 @@ namespace SDK {
 		const char *GetName(unsigned int vguiPanel) {
 		
 			typedef const char *(__thiscall* OrigFn)(void*, unsigned int);
-			return Aniware::g_pCUtilities->VirtualFunction<OrigFn>(this, 36)(this, vguiPanel);
+			return Aniware::Utilities::VirtualFunction<OrigFn>(this, 36)(this, vguiPanel);
 		
 		}
 	};
