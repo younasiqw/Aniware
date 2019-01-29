@@ -29,7 +29,6 @@ namespace Aniware {
 		Utilities::ConsoleLog("Console initalised");
 
 		Aniware::Interfaces::Initialise();
-
 		Aniware::Hooks::Initialise();
 
 	}

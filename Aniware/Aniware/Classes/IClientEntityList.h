@@ -1,7 +1,7 @@
 #pragma once
 
-#include "..\Aniware\Classes\IClientEntity.h"
-#include "..\Aniware\Globals\Globals.h"
+#include "..\Classes\IClientEntity.h"
+#include "..\Globals\Globals.h"
 
 namespace SDK {
 

@@ -9,11 +9,9 @@ namespace SDK {
 
 		float x, y, z;
 
-		Vector(float X, float Y, float Z) {
+		Vector() { x = 0, y = 0, z = 0; }
+		Vector(float X, float Y, float Z) { x = X, y = Y, z = Z; }
 
-			x = X, y = Y, z = Z;
-
-		}
 	};
 
 	typedef Vector QAngle;

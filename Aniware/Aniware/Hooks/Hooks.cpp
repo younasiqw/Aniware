@@ -6,28 +6,21 @@ namespace Aniware {
 	std::unique_ptr <SDK::VFTableHook> g_pEngineHook = nullptr;
 	std::unique_ptr <SDK::VFTableHook> g_pClientModeHook = nullptr;
 
-	using CreateMoveFn = bool(__fastcall*) (SDK::IClientMode*, void*, float, SDK::CUserCmd*);
-	using ViewModelFn = float(__stdcall*)(void*);
-
 	namespace Functions {
 
-		CreateMoveFn oCreateMove;
-		bool __fastcall hkCreateMove(SDK::IClientMode* thisptr, void* edx, float sample_frametime, SDK::CUserCmd* pCmd) {
+		bool __fastcall hkCreateMove(float sample_frametime, SDK::CUserCmd* createmove_cmd) {
 
-			oCreateMove(thisptr, edx, sample_frametime, pCmd);
+			if (!createmove_cmd->command_number)
+				return false;
 
-			if (!pCmd || !pCmd->command_number)
-				return oCreateMove;
-
-			// Createmove features.
+			g_pCmd = createmove_cmd;
+			g_pCmd->viewangles = SDK::QAngle(0, 0, 0);
 
 			return false;
 		}
 
-		ViewModelFn oViewModel;
 		float __stdcall hkViewModelFOV() {
 
-			oViewModel(g_pClientMode);
 			return 100.f;
 
 		}
