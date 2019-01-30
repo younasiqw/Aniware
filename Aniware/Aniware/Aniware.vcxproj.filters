@@ -12,17 +12,17 @@
     <Filter Include="Header Files\Classes">
       <UniqueIdentifier>{68dcbb85-1955-4d4a-8c40-e65a06b11069}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Hooks">
-      <UniqueIdentifier>{3c2b4a1f-71c5-4ed4-bad4-f0b635c0fe5c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Hooks">
-      <UniqueIdentifier>{3e5d1f40-3faa-45bd-8c89-e5bb606a66da}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Globals">
       <UniqueIdentifier>{b2c617fc-5469-4d1f-b198-52492da135cd}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\Globals">
       <UniqueIdentifier>{9a625f3d-b532-4321-996b-7834d403095b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Features">
+      <UniqueIdentifier>{f9b7afcf-3cb1-4f61-83a1-a8bc9a499f35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Features">
+      <UniqueIdentifier>{668707a4-04c7-4b1a-8df0-1ab9df6bf584}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -30,11 +30,14 @@
     <ClCompile Include="Interfaces.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Hooks\Hooks.cpp">
-      <Filter>Source Files\Hooks</Filter>
-    </ClCompile>
     <ClCompile Include="Globals\Globals.cpp">
       <Filter>Source Files\Globals</Filter>
+    </ClCompile>
+    <ClCompile Include="Hooks\Hooks.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Features\CBhop.cpp">
+      <Filter>Source Files\Features</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -71,14 +74,29 @@
     <ClInclude Include="Classes\VTHook.h">
       <Filter>Header Files\Classes</Filter>
     </ClInclude>
-    <ClInclude Include="Hooks\Hooks.h">
-      <Filter>Header Files\Hooks</Filter>
-    </ClInclude>
     <ClInclude Include="Classes\Utilities.h">
       <Filter>Header Files\Classes</Filter>
     </ClInclude>
     <ClInclude Include="Globals\Globals.h">
       <Filter>Header Files\Globals</Filter>
+    </ClInclude>
+    <ClInclude Include="Hooks\Hooks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Features\CBhop.h">
+      <Filter>Header Files\Features</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\CBaseEntity.h">
+      <Filter>Header Files\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\CClientClass.h">
+      <Filter>Header Files\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\EStructs.h">
+      <Filter>Header Files\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\IClientNetworkable.h">
+      <Filter>Header Files\Classes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

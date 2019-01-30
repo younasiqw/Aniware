@@ -20,22 +20,28 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Entrypoint.cpp" />
+    <ClCompile Include="Features\CBhop.cpp" />
     <ClCompile Include="Globals\Globals.cpp" />
     <ClCompile Include="Hooks\Hooks.cpp" />
     <ClCompile Include="Interfaces.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Classes\CBaseEntity.h" />
+    <ClInclude Include="Classes\CClientClass.h" />
     <ClInclude Include="Classes\CInput.h" />
     <ClInclude Include="Classes\Color.h" />
+    <ClInclude Include="Classes\EStructs.h" />
     <ClInclude Include="Classes\IClientEntity.h" />
     <ClInclude Include="Classes\IClientEntityList.h" />
     <ClInclude Include="Classes\IClientMode.h" />
+    <ClInclude Include="Classes\IClientNetworkable.h" />
     <ClInclude Include="Classes\IPanel.h" />
     <ClInclude Include="Classes\ISurface.h" />
     <ClInclude Include="Classes\IVEngineClient.h" />
     <ClInclude Include="Classes\Utilities.h" />
     <ClInclude Include="Classes\Vector.h" />
     <ClInclude Include="Classes\VTHook.h" />
+    <ClInclude Include="Features\CBhop.h" />
     <ClInclude Include="Globals\Globals.h" />
     <ClInclude Include="Hooks\Hooks.h" />
     <ClInclude Include="Interfaces.h" />

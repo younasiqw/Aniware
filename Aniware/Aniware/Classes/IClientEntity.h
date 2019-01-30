@@ -1,5 +1,6 @@
 #pragma once
 
+#include "..\Classes\CClientClass.h"
 #include "..\Globals\Globals.h"
 
 namespace SDK {
@@ -7,6 +8,12 @@ namespace SDK {
 	class IBaseClientDLL {
 	public:
 		
+		ClientClass* GetAllClasses() {
+
+			typedef ClientClass*(__thiscall *OrigFn)(void*);
+			return Aniware::Utilities::VirtualFunction<OrigFn>(this, 8)(this);
+		
+		}
 	};
 
 	class IClientEntity {

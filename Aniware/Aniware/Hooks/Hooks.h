@@ -3,6 +3,7 @@
 #include <memory>
 #include "..\Classes\VTHook.h"
 #include "..\Interfaces.h"
+#include "..\Features\CBhop.h"
 
 namespace Aniware {
 
