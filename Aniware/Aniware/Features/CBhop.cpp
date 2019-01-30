@@ -2,14 +2,14 @@
 
 namespace Aniware {
 
-	void CBhop::Initialise(SDK::CUserCmd* pCmd, SDK::CBaseEntity* pLocal) {
+	void CBhop::Initialise() {
 
-		if (!pCmd or !pLocal)
+		if (!g_pCmd or !g_pLoc)
 			return;
 
-		if (pCmd->buttons & IN_JUMP and pLocal->Flags() > FL_INAIR) {
+		if (g_pCmd->buttons & IN_JUMP and g_pLoc->Flags() > FL_INAIR) {
 
-			pCmd->buttons |= IN_JUMP;
+			g_pCmd->buttons |= IN_JUMP;
 
 		}
 	}

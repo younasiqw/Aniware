@@ -6,6 +6,7 @@ namespace SDK {
 	public:
 		
 		bool bAutoBhop = false;
+		bool bAimbot = false;
 
 	};
 }

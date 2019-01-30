@@ -1,6 +1,7 @@
 #pragma once
 
 #include "..\Classes\Vector.h"
+#include "..\Classes\CBaseEntity.h"
 
 namespace SDK {
 
@@ -28,6 +29,36 @@ namespace SDK {
 			return GetValue<float>(0x104);
 
 		}	
+		
+		int Health() {
+
+			return 0;
+
+		}
+
+		int Team() {
+
+			return 0;
+
+		}
+
+		Vector Origin() {
+
+			return Vector(0, 0, 0);
+
+		}
+
+		bool isValid() {
+
+			if (!(this->Health() > 0))
+				return false;
+
+			if (!(this->Team() > 1))
+				return false;
+
+			return true;
+
+		}
 
 		// GetFlags
 		// GetOrigin

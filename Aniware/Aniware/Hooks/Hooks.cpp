@@ -5,6 +5,7 @@ using namespace SDK;
 namespace Aniware {
 
 	std::unique_ptr <CBhop> f_pBhop = nullptr;
+	std::unique_ptr <CAimbot> f_pAimbot = nullptr;
 	
 	std::unique_ptr <VFTableHook> g_pPanelHook = nullptr;
 	std::unique_ptr <VFTableHook> g_pEngineHook = nullptr;
@@ -21,15 +22,18 @@ namespace Aniware {
 
 			g_pCmd = createmove_cmd;
 			
-
 			if (g_pEngine->isInGame()) {
 
 				if(g_pSettings->bAutoBhop)
-					f_pBhop->Initialise(g_pCmd, g_pLoc);
+					f_pBhop->Initialise();
+
+				if (g_pSettings->bAimbot)
+					f_pAimbot->Initialise();
 
 			}
 
 			return false;
+
 		}
 
 		float __stdcall hkViewModelFOV() {

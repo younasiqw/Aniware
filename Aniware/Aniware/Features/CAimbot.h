@@ -1,13 +1,16 @@
 #pragma once
 
-#include "..\Classes\EStructs.h"
+#include "..\Interfaces.h"
 #include "..\Classes\CInput.h"
 #include "..\Classes\CBaseEntity.h"
-#include "..\Interfaces.h"
 
 namespace Aniware {
 
-	class CBhop {
+	class CAimbot {
+	private:
+
+		int GetPlayerIndex();
+
 	public:
 
 		void Initialise();
