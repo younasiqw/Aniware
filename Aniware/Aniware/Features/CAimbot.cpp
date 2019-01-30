@@ -24,9 +24,7 @@ namespace Aniware {
 		if (!g_pCmd or !g_pLoc)
 			return;
 
-		SDK::CBaseEntity * pEntity = (SDK::CBaseEntity*)g_pEntityList->GetClientEntity(this->GetPlayerIndex());
-	
-
-
+		/* Aimbot routine */
+		
 	}
 }
