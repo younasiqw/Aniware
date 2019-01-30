@@ -14,11 +14,13 @@ namespace Aniware {
 
 		bool __fastcall hkCreateMove(float sample_frametime, SDK::CUserCmd* createmove_cmd) {
 
-			if (!createmove_cmd->command_number)
+			g_pLoc = (CBaseEntity*)g_pEntityList->GetClientEntity(g_pEngine->GetLocalPlayer());
+
+			if (!createmove_cmd->command_number or !g_pLoc)
 				return false;
 
 			g_pCmd = createmove_cmd;
-			g_pLoc = (CBaseEntity*)g_pEntityList->GetClientEntity(g_pEngine->GetLocalPlayer());
+			
 
 			if (g_pEngine->isInGame()) {
 
