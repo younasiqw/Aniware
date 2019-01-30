@@ -98,5 +98,8 @@
     <ClInclude Include="Classes\IClientNetworkable.h">
       <Filter>Header Files\Classes</Filter>
     </ClInclude>
+    <ClInclude Include="Classes\Settings.h">
+      <Filter>Header Files\Classes</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -7,7 +7,10 @@ namespace Aniware {
 		if (!pCmd or !pLocal)
 			return;
 
-		// run
+		if (pCmd->buttons & IN_JUMP and pLocal->Flags() > FL_INAIR) {
 
+			pCmd->buttons |= IN_JUMP;
+
+		}
 	}
 }

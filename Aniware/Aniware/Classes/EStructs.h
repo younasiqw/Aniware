@@ -286,3 +286,10 @@ enum class EClassIds : int {
 	SporeExplosion = 276,
 
 };
+
+enum EntityFlags : int {
+
+	FL_ONGROUND = 257,
+	FL_INAIR = 256,
+
+};

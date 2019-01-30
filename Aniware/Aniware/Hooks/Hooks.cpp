@@ -20,7 +20,12 @@ namespace Aniware {
 			g_pCmd = createmove_cmd;
 			g_pLoc = (CBaseEntity*)g_pEntityList->GetClientEntity(g_pEngine->GetLocalPlayer());
 
-			f_pBhop->Initialise(g_pCmd, g_pLoc);
+			if (g_pEngine->isInGame()) {
+
+				if(g_pSettings->bAutoBhop)
+					f_pBhop->Initialise(g_pCmd, g_pLoc);
+
+			}
 
 			return false;
 		}

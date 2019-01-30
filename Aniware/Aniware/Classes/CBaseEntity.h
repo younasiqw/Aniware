@@ -23,7 +23,11 @@ namespace SDK {
 
 	public:
 
-		
+		float Flags() {
+
+			return GetValue<float>(0x104);
+
+		}	
 
 		// GetFlags
 		// GetOrigin

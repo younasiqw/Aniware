@@ -1,5 +1,6 @@
 #pragma once
 
+#include "..\Classes\EStructs.h"
 #include "..\Classes\CInput.h"
 #include "..\Classes\CBaseEntity.h"
 
