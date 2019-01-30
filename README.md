@@ -1,2 +1,2 @@
 # Aniware
-Private internal project
+Ok-ish internal base
